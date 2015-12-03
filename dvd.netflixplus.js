@@ -32,4 +32,4 @@ InstantMovies[i].parentNode.appendChild(movielink);
 };
 
 //for individual dvd pages
-javascript:(function(){%20URL%20=%20window.document.URL;%20movieURL%20=%20URL.replace("http://dvd.","http://");%20instantURL%20=%20movieURL.split("?");%20window.location.href%20=%20(instantURL[0]);%20})();
+javascript:(function(){URL=window.document.URL;movieURL=URL.replace("http://dvd.","http://");instantURL=movieURL.split("?");window.location.href=(instantURL[0]);})();
