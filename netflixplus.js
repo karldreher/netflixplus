@@ -1,13 +1,3 @@
-//netflixplus
-//by Karl Dreher
-
-//This should run on dvd.netflix.com to get an accessible link to a "instant watch" 
-//movie, rather than simply a link to play it.  Netflix removed this from their UI
-//many years ago...I wanted it back.
-
-
-
-
 function Queue(){
 
 	Buttons = document.getElementsByTagName("button")
@@ -19,22 +9,18 @@ function Queue(){
 			movie = dvdlink.split("?trkid")[0].split("/")[1];
 			var newurl = "http://netflix.com/title/" + movie;
 
-			var br = document.createElement("br")
 			var movielink = document.createElement("a"); 
 			movielink.setAttribute("align", "left"); 
 			movielink.setAttribute("href", newurl);
-			movielink.setAttribute("style", "background: #4E9CAF\; padding: 5%\; border-radius: 15%\; width: 80%\; color: white\; display: block\; text-align: center\;");
+			movielink.setAttribute("style", "float: right\; background: red\; width: 30%\; height: 15%\; padding: 2%\; margin-left: 10%\; font-size: 110%\; border-radius: 15%\; color: white\; text-align: center\; box-shadow: 5px 5px 5px #888888\;");
 
 
-			movielink.innerHTML = "Go to Instant Page";
-			//Buttons[i].parentNode.appendChild(br);
-			Buttons[i].parentNode.appendChild(movielink);
+			movielink.innerHTML = "Instant";
+			Buttons[i].parentNode.previousSibling.appendChild(movielink);
 
 		};
 	
 	};
 }
 
-
-//for individual dvd pages
-javascript:(function(){URL=window.document.URL;movieURL=URL.replace("http://dvd.","http://");instantURL=movieURL.split("?");window.location.href=(instantURL[0]);})();
+Queue()
