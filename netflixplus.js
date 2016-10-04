@@ -1,4 +1,4 @@
-function Queue(){
+function nf_plus(){
 
 	Buttons = document.getElementsByTagName("button")
 	
@@ -23,4 +23,4 @@ function Queue(){
 	};
 }
 
-Queue()
+nf_plus()
