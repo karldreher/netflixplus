@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "NetflixPlus",
-  "version": "1.0.1",
+  "version": "1.1.0",
  
   "description": "Adds functionality for DVD.netflix.com users.  ",
   "icons": {
@@ -11,7 +11,7 @@
 
   "applications": {
     "gecko": {
-      "id": "netflixplus@mozilla.org",
+      "id": "netflixplus_addon@mozilla.org",
       "strict_min_version": "45.0"
     }
   },
