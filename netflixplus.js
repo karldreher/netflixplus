@@ -1,26 +1,23 @@
-function nf_plus(){
-
-	Buttons = document.getElementsByTagName("button")
+function DVDpage(){
+	// this function is for adding an "instant" button on individual DVD pages.  
 	
-	for (i in Buttons){
-		if (Buttons[i].innerHTML == "Play"){
-			console.log(Buttons[i].parentElement.previousSibling.innerHTML);
-			dvdlink = (Buttons[i].parentElement.previousSibling.innerHTML).split("dvd.netflix.com/Movie/")[1];
-			movie = dvdlink.split("?trkid")[0].split("/")[1];
-			var newurl = "http://netflix.com/title/" + movie;
-
-			var movielink = document.createElement("a"); 
-			movielink.setAttribute("align", "left"); 
-			movielink.setAttribute("href", newurl);
-			movielink.setAttribute("style", "float: right\; background: red\; width: 30%\; height: 15%\; padding: 2%\; margin-left: 10%\; font-size: 110%\; border-radius: 15%\; color: white\; text-align: center\; box-shadow: 5px 5px 5px #888888\;");
-
-
-			movielink.innerHTML = "Instant";
-			Buttons[i].parentNode.previousSibling.appendChild(movielink);
-
-		};
+	Button = document.getElementsByClassName("btn-play")
+	if (Button.length == 1){
+		url = Button[0].href
+		movieid = url.split("movieid=")[1].split("&")[0]
+		var newurl = "https://netflix.com/title/" + movieid;
+		console.log(newurl);
 	
+	
+		var movielink = document.createElement("a"); 
+		movielink.setAttribute("align", "left"); 
+		movielink.setAttribute("href", newurl);
+		movielink.setAttribute("style", "float: left\; background: red\; width: 105%\; height: 15%\; padding: 2%\; marginTop: 40px\; border-radius: 5%\; font-size: 110%\; color: white\; text-align: center\;");
+
+
+		movielink.innerHTML = "Instant";
+		Button[0].parentNode.parentNode.appendChild(movielink);
 	};
 }
 
-nf_plus()
+DVDpage()
