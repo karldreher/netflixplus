@@ -15,7 +15,7 @@ function DVDpage(){
 		movielink.setAttribute("style", "float: left\; background: red\; width: 105%\; height: 15%\; padding: 2%\; marginTop: 40px\; border-radius: 5%\; font-size: 110%\; color: white\; text-align: center\;");
 
 
-		movielink.innerHTML = "Instant";
+		movielink.textContent = "Instant";
 		Button[0].parentNode.parentNode.appendChild(movielink);
 	};
 }
