@@ -4,17 +4,15 @@
 	"name": "NetflixPlus",
 	"version": "1.1.1",
 	
-
-	
 	"description": "Adds functionality for DVD.netflix.com users.  ",
 
 	"homepage_url": "https://chrome.google.com/webstore/detail/jpmjgmcpcfabhlagkmohacfkabfkgelg",
 
 	"icons": { 	
-			"16": "netflixplus-16.png",
-			"32": "netflixplus-32.png",
-			"48": "netflixplus-48.png",
-			"128": "netflixplus-128.png" },
+		"16": "netflixplus-16.png",
+		"32": "netflixplus-32.png",
+		"48": "netflixplus-48.png",
+		"128": "netflixplus-128.png" },
 	
 	"background": {
 		"scripts": ["background.js"],
