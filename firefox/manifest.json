@@ -5,9 +5,8 @@
   "version": "1.1.1",
  
   "description": "Adds functionality for DVD.netflix.com users.  ",
-  "icons": {
-    "48": "icons/border-48.png"
-  },
+  "icons": {    "48": "netflixplus-48.png",
+			    "128": "netflixplus-128.png" },
 
   "applications": {
     "gecko": {
