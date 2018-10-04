@@ -1,25 +1,26 @@
 {
 
-  "manifest_version": 2,
-  "name": "NetflixPlus",
-  "version": "1.1.1",
+	"manifest_version": 2,
+	"name": "NetflixPlus",
+	"version": "1.1.1",
  
-  "description": "Adds functionality for DVD.netflix.com users.  ",
-  "icons": {    "48": "netflixplus-48.png",
-			    "128": "netflixplus-128.png" },
+	"description": "Adds functionality for DVD.netflix.com users.  ",
+	"icons": {  
+		"48": "netflixplus-48.png",
+		"128": "netflixplus-128.png" },
 
-  "applications": {
+	"applications": {
     "gecko": {
       "id": "netflixplus_addon@mozilla.org",
       "strict_min_version": "45.0"
-    }
-  },
+		}
+	},
 
-  "content_scripts": [
-    {
-      "matches": ["*://dvd.netflix.com/*"],
-      "js": ["netflixplus.js"]
-    }
-  ]
+	"content_scripts": [
+		{
+			"matches": ["*://dvd.netflix.com/*"],
+			"js": ["netflixplus.js"]
+		}
+	]
 
 }
