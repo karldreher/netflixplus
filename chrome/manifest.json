@@ -13,10 +13,10 @@
 			  "128": "netflixplus-128.png" },
 
 	"content_scripts": [
-	{
-		"matches": ["*://dvd.netflix.com/*"],
-		"js": ["netflixplus.js"]
-	}
+		{
+			"matches": ["*://dvd.netflix.com/*"],
+			"js": ["netflixplus.js"]
+		}
 	]
 
 }
