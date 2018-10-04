@@ -6,7 +6,7 @@
  
 	"description": "Adds functionality for DVD.netflix.com users.  ",
 	
-	"homepage_url": "https://addons.mozilla.org/en-US/firefox/addon/netflixplus/"
+	"homepage_url": "https://addons.mozilla.org/en-US/firefox/addon/netflixplus/",
 	
 	"icons": {  
 		"16": "netflixplus-16.png",
