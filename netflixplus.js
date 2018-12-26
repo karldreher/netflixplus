@@ -11,6 +11,7 @@ function DVDpage(){
 	
 		var movielink = document.createElement("a"); 
 		movielink.setAttribute("href", newurl);
+		movielink.setAttribute("class", "netflix-plus");
 		movielink.setAttribute("style", "position: relative\; top: 15px\; background: red\; padding: 2%\; height: 60px\; border-radius: 5%\; font-size: 130%\; color: white\; text-align: center\;");
 
 
