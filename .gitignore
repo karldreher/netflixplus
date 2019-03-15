@@ -1,0 +1,8 @@
+#ignore PNGs and JS files in build target directories
+/firefox/*.png
+/firefox/*.js
+/chrome/*.png
+/chrome/*.js
+
+#ignore ZIPs
+**/*.zip
