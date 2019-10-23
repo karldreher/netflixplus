@@ -1,41 +1,39 @@
+stages:
 
-jobs:
-- job: FirefoxBuild
-displayName: 'Firefox Build'
-pool:
- name: Hosted Ubuntu 1604
-steps:
-- task: Bash@3
- displayName: Build
- inputs:
- targetType: filePath
- filePath: './build/build-firefox.sh'
- workingDirectory: build
- failOnStderr: true
+- stage: FirefoxBuild
+  jobs:
+  - job: FirefoxBuild
+    pool:
+      name: Hosted Ubuntu 1604
+    steps:
+    - task: Build
+    displayName: Build
+    inputs:
+    targetType: filePath
+    filePath: './build/build-firefox.sh'
+    workingDirectory: build
+    failOnStderr: true
+task: PublishPipelineArtifact
+    displayName: 'Publish Pipeline Artifact'
+    inputs:
+    targetPath: firefox/firefox.zip
+    artifact: 'firefox-latest.zip'
 
-task: PublishPipelineArtifact@1
- displayName: 'Publish Pipeline Artifact'
- inputs:
- targetPath: firefox/firefox.zip
- artifact: 'firefox-latest.zip'
-
-job:ChromeBuild
-displayName: 'Chrome Build'
-pool:
- name: Hosted Ubuntu 1604
-steps:
-- task: Bash@3
- displayName: Build
- inputs:
- targetType: filePath
- filePath: './build/build-chrome.sh'
- workingDirectory: build/
- failOnStderr: true
-
-task: PublishPipelineArtifact@1
- displayName: 'Publish Pipeline Artifact'
- inputs:
- targetPath: chrome/chrome.zip
- artifact: 'chrome-latest.zip'
-
-
+- stage: ChromeBuild
+  jobs:
+  - job: ChromeBuild
+    pool:
+      name: Hosted Ubuntu 1604
+    steps:
+    - task: Build
+    displayName: Build
+    inputs:
+    targetType: filePath
+    filePath: './build/build-chrome.sh'
+    workingDirectory: build
+    failOnStderr: true
+	task: PublishPipelineArtifact
+    displayName: 'Publish Pipeline Artifact'
+    inputs:
+    targetPath: chrome/chrome.zip
+    artifact: 'chrome-latest.zip'
