@@ -1,6 +1,6 @@
 
 jobs:
-	-job: FirefoxBuild
+	- job: FirefoxBuild
 	displayName: 'Firefox Build'
 		pool:
 		  name: Hosted Ubuntu 1604
@@ -18,7 +18,8 @@ jobs:
 		  inputs:
 			targetPath: firefox/firefox.zip
 			artifact: 'firefox-latest.zip'
-	-job:ChromeBuild
+
+	- job:ChromeBuild
 	displayName: 'Chrome Build'
 	
 		pool:
