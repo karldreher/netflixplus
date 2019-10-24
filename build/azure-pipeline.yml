@@ -1,0 +1,34 @@
+jobs:
+  - job: FirefoxBuild
+    pool:
+      name: Hosted Ubuntu 1604
+    steps:
+    - task: bash@3
+      displayName: Build Firefox
+      inputs:
+        targetType: filePath
+        filePath: './build/build-firefox.sh'
+        workingDirectory: build
+        failOnStderr: true
+    - task: PublishPipelineArtifact@1
+      displayName: 'Publish Pipeline Artifact'
+      inputs:
+        targetPath: firefox/firefox.zip
+        artifact: 'firefox-latest.zip'
+
+  - job: ChromeBuild
+    pool:
+      name: Hosted Ubuntu 1604
+    steps:
+    - task: bash@3
+      displayName: Build Chrome
+      inputs:
+        targetType: filePath
+        filePath: './build/build-chrome.sh'
+        workingDirectory: build
+        failOnStderr: true
+    - task: PublishPipelineArtifact@1
+      displayName: 'Publish Pipeline Artifact'
+      inputs:
+        targetPath: chrome/chrome.zip
+        artifact: 'chrome-latest.zip'
