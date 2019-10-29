@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/karldreher/netflixplus/_apis/build/status/netflixplus-CI?branchName=master)](https://dev.azure.com/karldreher/netflixplus/_build/latest?definitionId=4&branchName=master)
+
 # NetflixPlus
 Adds functionality for **DVD**.netflix.com users. 
 NetflixPlus is currently at version `1.5.0`.
