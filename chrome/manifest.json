@@ -24,7 +24,8 @@
 	"content_scripts": [
 		{
 			"matches": ["*://dvd.netflix.com/*"],
-			"js": ["netflixplus.js"]
+			"js": ["netflixplus.js"],
+			"run_at": "document_idle"
 		}
 	]
 
