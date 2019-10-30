@@ -49,7 +49,7 @@ jobs:
     - task: PublishPipelineArtifact@1
       displayName: 'Publish Pipeline Artifact'
       inputs:
-        targetPath: firefox/
+        targetPath: firefox/firefox.zip
         artifact: 'firefox-$(version).zip'
 
   - job: ChromeBuild
@@ -71,5 +71,5 @@ jobs:
     - task: PublishPipelineArtifact@1
       displayName: 'Publish Pipeline Artifact'
       inputs:
-        targetPath: chrome/
+        targetPath: chrome/chrome.zip
         artifact: 'chrome-$(version).zip'
