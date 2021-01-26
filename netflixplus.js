@@ -31,7 +31,16 @@ for (i = 0; i < (formatItems.length); i++) {
 
 
 };
+window.addEventListener('load', function () {
 
-if (streaming > 0) {
-	DVDpage();
-}
+	if (streaming > 0) {
+		do {
+			DVDpage();
+			if (document.getElementsByClassName("netflix-plus").length < 1){
+				console.log("waiting for netflixplus link to be created")
+				
+			}
+		}
+		while (document.getElementsByClassName("netflix-plus").length < 1)
+	}
+}, false);
