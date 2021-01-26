@@ -1,4 +1,4 @@
-| :exclamation: Deprecation Notice          |
+| :warning: Deprecation Notice          |
 |:------------------------------------------|
 | This extension has been deprecated.  As of this point the Azure Devops pipeline has been disabled, the store pages have been removed/ disabled, and no new development will occur.  There are a number of reasons for this.  This repository will remain intact, to keep the sourcecode available for reference.         |
 
